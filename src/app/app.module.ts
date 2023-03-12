@@ -20,7 +20,9 @@ import { AppComponent } from './app.component';
         TuiAlertModule,
         TuiButtonModule
     ],
-  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
+  providers: [
+      {provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
