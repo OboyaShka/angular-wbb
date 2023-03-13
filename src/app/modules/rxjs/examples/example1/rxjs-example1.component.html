@@ -9,9 +9,9 @@
     </label>
     <button>I'm a button</button>
 </p>
-<div class="focus">
+<div class="focus" (focusWithin)="focusWithin($event)">
     <h2>
-        Track focus in this block
+        Track focus in this {{ name$ | async }}
     </h2>
     <p>
         <select>

@@ -1,16 +1,19 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { BehaviorSubject } from "rxjs";
 
 @Component({
-  selector: 'rxjs-example1',
-  templateUrl: './rxjs-example1.component.html',
-  styleUrls: ['./rxjs-example1.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'rxjs-example1',
+    templateUrl: './rxjs-example1.component.html',
+    styleUrls: ['./rxjs-example1.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RxjsExample1Component implements OnInit {
+export class RxjsExample1Component {
+    public name$ = new BehaviorSubject<string | null>(null)
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
-
+     focusWithin($event: Element | null) {
+        this.name$.next($event?.tagName || 'NO VALUE!')
+    }
 }

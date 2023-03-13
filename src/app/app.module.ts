@@ -1,11 +1,13 @@
 import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
 import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER, TuiButtonModule } from "@taiga-ui/core";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from "@shared/shared.module";
+import { CommonModule } from "@angular/common";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -13,12 +15,15 @@ import { AppComponent } from './app.component';
   ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
         BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        CommonModule,
         TuiRootModule,
         TuiDialogModule,
         TuiAlertModule,
-        TuiButtonModule
+        TuiButtonModule,
+        SharedModule
     ],
   providers: [
       {provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}

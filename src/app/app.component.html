@@ -1,10 +1,11 @@
 <tui-root>
-    <div>Привет!</div>
-    <button
-        tuiButton
-        icon="tuiIconInfo"
-    >
-        Начнём?
-    </button>
-    <router-outlet></router-outlet>
+    <header class="header">
+        <div class="header__logo" [routerLink]="['/']">WBB</div>
+        <a class="header__link" [routerLink]="['rxjs']">RXJS</a>
+        <div></div>
+    </header>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+    <footer>Футер</footer>
 </tui-root>
