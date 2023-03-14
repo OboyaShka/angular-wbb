@@ -1,1 +1,29 @@
-<a [routerLink]="['example1']">example1</a>
+<tui-tabs [activeItemIndex]="activeItemIndex$ | async">
+    <button
+        tuiTab
+        [routerLink]="['example1']"
+        (click)="activeTab(0)"
+    >
+        Example 1
+    </button>
+    <button
+        tuiTab
+        [routerLink]="['example2']"
+        (click)="activeTab(1)"
+    >
+        Example 2
+    </button>
+    <button
+        tuiTab
+        [routerLink]="['example3']"
+        (click)="activeTab(2)"
+    >
+        Example 3
+    </button>
+</tui-tabs>
+<router-outlet *ngIf="(activeItemIndex$ | async) !== null; else content"></router-outlet>
+
+<ng-template #content>
+    <p>Примеры по RXJS</p>
+    <a href="https://github.com/AngularWave/rxjs-challenge" target="_blank"> 1-20 - Challenges</a>
+</ng-template>

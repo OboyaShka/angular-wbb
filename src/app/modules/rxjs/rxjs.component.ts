@@ -1,16 +1,40 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { ActivatedRoute, NavigationStart, Router } from "@angular/router";
+import { BehaviorSubject, Observable, Subject } from "rxjs";
+import { filter, takeUntil } from "rxjs/operators";
 
 @Component({
-  selector: 'app-rxjs',
-  templateUrl: './rxjs.component.html',
-  styleUrls: ['./rxjs.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-rxjs',
+    templateUrl: './rxjs.component.html',
+    styleUrls: ['./rxjs.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RxjsComponent implements OnInit {
+export class RxjsComponent implements OnInit, OnDestroy {
+    public activeItemIndex$ = new BehaviorSubject<number | null>(null)
+    private destroy$ = new Subject<void>()
 
-  constructor() { }
+    constructor(private route: ActivatedRoute, public router: Router) {
+        (router.events.pipe(
+            takeUntil(this.destroy$),
+            filter(event => event instanceof NavigationStart)) as Observable<NavigationStart>
+        )
+            .subscribe(navStart => navStart.url.split('/').length === 2 && this.activeItemIndex$.next(null))
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.activeItemIndex$.next(this.route.snapshot.children.length ?  this.route.snapshot.children[0].data['tabIndex'] : null)
 
+    }
+
+    ngOnDestroy(): void {
+        this.destroy$.next()
+    }
+
+    onClick(settings: string) {
+        console.log((settings))
+    }
+
+    activeTab(tabNumber: number): void {
+        this.activeItemIndex$.next(tabNumber)
+    }
 }
