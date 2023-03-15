@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/
 import { ActivatedRoute, NavigationStart, Router } from "@angular/router";
 import { BehaviorSubject, Observable, Subject } from "rxjs";
 import { filter, takeUntil } from "rxjs/operators";
+import { RXJS_CHILDREN_ROUTES } from "@app/modules/rxjs/rxjs.constants";
 
 @Component({
     selector: 'app-rxjs',
@@ -11,6 +12,7 @@ import { filter, takeUntil } from "rxjs/operators";
 })
 export class RxjsComponent implements OnInit, OnDestroy {
     public activeItemIndex$ = new BehaviorSubject<number | null>(null)
+    public examples = RXJS_CHILDREN_ROUTES
     private destroy$ = new Subject<void>()
 
     constructor(private route: ActivatedRoute, public router: Router) {
@@ -23,7 +25,6 @@ export class RxjsComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.activeItemIndex$.next(this.route.snapshot.children.length ?  this.route.snapshot.children[0].data['tabIndex'] : null)
-
     }
 
     ngOnDestroy(): void {
