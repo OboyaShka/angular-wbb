@@ -17,6 +17,7 @@ import { TuiRepeatTimesModule } from "@taiga-ui/cdk";
 import { RxjsExample7Component } from './examples/rxjs-example7/rxjs-example7.component';
 import { RxjsExample8Component } from './examples/rxjs-example8/rxjs-example8.component';
 import { FilterPipe } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-example8.pipe";
+import { RxjsExample9Component } from './examples/rxjs-example9/rxjs-example9.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { FilterPipe } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-exampl
         RxjsExample6Component,
         RxjsExample7Component,
         RxjsExample8Component,
-	    FilterPipe
+	    FilterPipe,
+     RxjsExample9Component
     ],
 	imports: [
 		CommonModule,
