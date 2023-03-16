@@ -14,6 +14,9 @@ import { RxjsExample4Component } from './examples/rxjs-example4/rxjs-example4.co
 import { RxjsExample5Component } from './examples/rxjs-example5/rxjs-example5.component';
 import { RxjsExample6Component } from './examples/rxjs-example6/rxjs-example6.component';
 import { TuiRepeatTimesModule } from "@taiga-ui/cdk";
+import { RxjsExample7Component } from './examples/rxjs-example7/rxjs-example7.component';
+import { RxjsExample8Component } from './examples/rxjs-example8/rxjs-example8.component';
+import { FilterPipe } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-example8.pipe";
 
 @NgModule({
     declarations: [
@@ -23,7 +26,10 @@ import { TuiRepeatTimesModule } from "@taiga-ui/cdk";
         RxjsExample3Component,
         RxjsExample4Component,
         RxjsExample5Component,
-        RxjsExample6Component
+        RxjsExample6Component,
+        RxjsExample7Component,
+        RxjsExample8Component,
+	    FilterPipe
     ],
 	imports: [
 		CommonModule,
@@ -31,7 +37,7 @@ import { TuiRepeatTimesModule } from "@taiga-ui/cdk";
 		FocusWithinModule,
 		RxjsRoutingModule,
 		TuiTabsModule,
-		TuiRepeatTimesModule,
+		TuiRepeatTimesModule
 	], providers: [
         {
             provide: PAGE_VISIBILITY_PROVIDE_TOKEN,

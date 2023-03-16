@@ -6,18 +6,21 @@ import { WbbMainComponent } from './components/wbb-main/wbb-main.component';
 
 
 @NgModule({
-    declarations: [
-    
-    WbbMainComponent
-  ],
-    exports: [
-    ],
-    imports: [
-        CommonModule,
-        RouterModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ]
+	declarations: [
+		WbbMainComponent
+	],
+	exports: [
+		CommonModule,
+		RouterModule,
+		FormsModule,
+		ReactiveFormsModule
+	],
+	imports: [
+		CommonModule,
+		RouterModule,
+		FormsModule,
+		ReactiveFormsModule
+	]
 })
 export class SharedModule {
 }

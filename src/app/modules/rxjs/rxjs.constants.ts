@@ -5,6 +5,8 @@ import { RxjsExample3Component } from "@app/modules/rxjs/examples/rxjs-example3/
 import { RxjsExample4Component } from "@app/modules/rxjs/examples/rxjs-example4/rxjs-example4.component";
 import { RxjsExample5Component } from "@app/modules/rxjs/examples/rxjs-example5/rxjs-example5.component";
 import { RxjsExample6Component } from "@app/modules/rxjs/examples/rxjs-example6/rxjs-example6.component";
+import { RxjsExample7Component } from "@app/modules/rxjs/examples/rxjs-example7/rxjs-example7.component";
+import { RxjsExample8Component } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-example8.component";
 
 export const PAGE_VISIBILITY_PROVIDE_TOKEN = new InjectionToken('rxjs-example-2 page visibility service token')
 
@@ -49,6 +51,20 @@ export const RXJS_CHILDREN_ROUTES = [
 		component: RxjsExample6Component,
 		data: {
 			tabIndex: 5
+		}
+	},
+	{
+		path: 'example7',
+		component: RxjsExample7Component,
+		data: {
+			tabIndex: 6
+		}
+	},
+	{
+		path: 'example8',
+		component: RxjsExample8Component,
+		data: {
+			tabIndex: 7
 		}
 	}
 ]
