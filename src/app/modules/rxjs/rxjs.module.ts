@@ -18,6 +18,7 @@ import { RxjsExample7Component } from './examples/rxjs-example7/rxjs-example7.co
 import { RxjsExample8Component } from './examples/rxjs-example8/rxjs-example8.component';
 import { FilterPipe } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-example8.pipe";
 import { RxjsExample9Component } from './examples/rxjs-example9/rxjs-example9.component';
+import { RxjsExample10Component } from './examples/rxjs-example10/rxjs-example10.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { RxjsExample9Component } from './examples/rxjs-example9/rxjs-example9.co
         RxjsExample7Component,
         RxjsExample8Component,
 	    FilterPipe,
-     RxjsExample9Component
+     RxjsExample9Component,
+     RxjsExample10Component
     ],
 	imports: [
 		CommonModule,
