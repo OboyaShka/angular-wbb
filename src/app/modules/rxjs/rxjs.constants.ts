@@ -9,6 +9,7 @@ import { RxjsExample7Component } from "@app/modules/rxjs/examples/rxjs-example7/
 import { RxjsExample8Component } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-example8.component";
 import { RxjsExample9Component } from "@app/modules/rxjs/examples/rxjs-example9/rxjs-example9.component";
 import { RxjsExample10Component } from "@app/modules/rxjs/examples/rxjs-example10/rxjs-example10.component";
+import { RxjsExample11Component } from "./examples/rxjs-example11/rxjs-example11.component";
 
 export const PAGE_VISIBILITY_PROVIDE_TOKEN = new InjectionToken('rxjs-example-2 page visibility service token')
 
@@ -81,6 +82,13 @@ export const RXJS_CHILDREN_ROUTES = [
 		component: RxjsExample10Component,
 		data: {
 			tabIndex: 9
+		}
+	},
+	{
+		path: 'example11',
+		component: RxjsExample11Component,
+		data: {
+			tabIndex: 10
 		}
 	}
 ]

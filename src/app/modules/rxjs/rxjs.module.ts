@@ -19,35 +19,41 @@ import { RxjsExample8Component } from './examples/rxjs-example8/rxjs-example8.co
 import { FilterPipe } from "@app/modules/rxjs/examples/rxjs-example8/rxjs-example8.pipe";
 import { RxjsExample9Component } from './examples/rxjs-example9/rxjs-example9.component';
 import { RxjsExample10Component } from './examples/rxjs-example10/rxjs-example10.component';
+import { RxjsExample11Component } from './examples/rxjs-example11/rxjs-example11.component';
+import {
+	NotificationModule
+} from "@app/modules/rxjs/examples/rxjs-example11/rxjs-example11-notification/rxjs-example11-notification.module";
 
 @NgModule({
-    declarations: [
-        RxjsComponent,
-        RxjsExample1Component,
-        RxjsExample2Component,
-        RxjsExample3Component,
-        RxjsExample4Component,
-        RxjsExample5Component,
-        RxjsExample6Component,
-        RxjsExample7Component,
-        RxjsExample8Component,
-	    FilterPipe,
-     RxjsExample9Component,
-     RxjsExample10Component
-    ],
+	declarations: [
+		RxjsComponent,
+		RxjsExample1Component,
+		RxjsExample2Component,
+		RxjsExample3Component,
+		RxjsExample4Component,
+		RxjsExample5Component,
+		RxjsExample6Component,
+		RxjsExample7Component,
+		RxjsExample8Component,
+		FilterPipe,
+		RxjsExample9Component,
+		RxjsExample10Component,
+		RxjsExample11Component
+	],
 	imports: [
 		CommonModule,
 		SharedModule,
 		FocusWithinModule,
 		RxjsRoutingModule,
 		TuiTabsModule,
-		TuiRepeatTimesModule
+		TuiRepeatTimesModule,
+		NotificationModule
 	], providers: [
-        {
-            provide: PAGE_VISIBILITY_PROVIDE_TOKEN,
-            useClass: PageVisibilityService
-        }
-    ]
+		{
+			provide: PAGE_VISIBILITY_PROVIDE_TOKEN,
+			useClass: PageVisibilityService
+		}
+	]
 })
 export class RxjsModule {
 }
