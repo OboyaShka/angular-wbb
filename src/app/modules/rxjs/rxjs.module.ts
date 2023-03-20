@@ -23,6 +23,9 @@ import { RxjsExample11Component } from './examples/rxjs-example11/rxjs-example11
 import {
 	NotificationModule
 } from "@app/modules/rxjs/examples/rxjs-example11/rxjs-example11-notification/rxjs-example11-notification.module";
+import { RxjsExample12Component } from './examples/rxjs-example12/rxjs-example12.component';
+import { RxjsExample12PortalComponent } from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-portal.component';
+import { RxjsExample12ModalCloseDirective } from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-modal-close.directive';
 
 @NgModule({
 	declarations: [
@@ -38,7 +41,10 @@ import {
 		FilterPipe,
 		RxjsExample9Component,
 		RxjsExample10Component,
-		RxjsExample11Component
+		RxjsExample11Component,
+  RxjsExample12Component,
+  RxjsExample12PortalComponent,
+  RxjsExample12ModalCloseDirective
 	],
 	imports: [
 		CommonModule,
