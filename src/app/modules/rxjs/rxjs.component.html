@@ -1,14 +1,16 @@
-<tui-tabs [activeItemIndex]="activeItemIndex$ | async">
-    <button
-        *ngFor="let example of examples; let index = index"
-        tuiTab
-        [routerLink]="[example.path]"
-        (click)="activeTab(example.data.tabIndex)"
+<tui-tabs-with-more [activeItemIndex]="activeItemIndex$ | async">
+    <ng-container *ngFor="let example of examples; let index = index"
     >
-        Example {{index + 1}}
-    </button>
-
-</tui-tabs>
+        <button
+            tuiTab
+            *tuiItem
+            [routerLink]="[example.path]"
+            (click)="activeTab(example.data.tabIndex)"
+        >
+            Example {{index + 1}}
+        </button>
+    </ng-container>
+</tui-tabs-with-more>
 <router-outlet *ngIf="(activeItemIndex$ | async) !== null; else content"></router-outlet>
 
 <ng-template #content>

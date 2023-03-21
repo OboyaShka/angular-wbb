@@ -11,92 +11,30 @@ import { RxjsExample9Component } from "@app/modules/rxjs/examples/rxjs-example9/
 import { RxjsExample10Component } from "@app/modules/rxjs/examples/rxjs-example10/rxjs-example10.component";
 import { RxjsExample11Component } from "./examples/rxjs-example11/rxjs-example11.component";
 import { RxjsExample12Component } from "@app/modules/rxjs/examples/rxjs-example12/rxjs-example12.component";
+import { RxjsExample13Component } from "@app/modules/rxjs/examples/rxjs-example13/rxjs-example13.component";
 
 export const PAGE_VISIBILITY_PROVIDE_TOKEN = new InjectionToken('rxjs-example-2 page visibility service token')
 
-export const RXJS_CHILDREN_ROUTES = [
-	{
-		path: 'example1',
-		component: RxjsExample1Component,
-		data: {
-			tabIndex: 0
-		}
-	},
-	{
-		path: 'example2',
-		component: RxjsExample2Component,
-		data: {
-			tabIndex: 1
-		}
-	},
-	{
-		path: 'example3',
-		component: RxjsExample3Component,
-		data: {
-			tabIndex: 2
-		}
-	},
-	{
-		path: 'example4',
-		component: RxjsExample4Component,
-		data: {
-			tabIndex: 3
-		}
-	},
-	{
-		path: 'example5',
-		component: RxjsExample5Component,
-		data: {
-			tabIndex: 4
-		}
-	},
-	{
-		path: 'example6',
-		component: RxjsExample6Component,
-		data: {
-			tabIndex: 5
-		}
-	},
-	{
-		path: 'example7',
-		component: RxjsExample7Component,
-		data: {
-			tabIndex: 6
-		}
-	},
-	{
-		path: 'example8',
-		component: RxjsExample8Component,
-		data: {
-			tabIndex: 7
-		}
-	},
-	{
-		path: 'example9',
-		component: RxjsExample9Component,
-		data: {
-			tabIndex: 8
-		}
-	},
-	{
-		path: 'example10',
-		component: RxjsExample10Component,
-		data: {
-			tabIndex: 9
-		}
-	},
-	{
-		path: 'example11',
-		component: RxjsExample11Component,
-		data: {
-			tabIndex: 10
-		}
-	},
-	{
-		path: 'example12',
-		component: RxjsExample12Component,
-		data: {
-			tabIndex: 11
-		}
-	}
+const components = [
+	RxjsExample1Component,
+	RxjsExample2Component,
+	RxjsExample3Component,
+	RxjsExample4Component,
+	RxjsExample5Component,
+	RxjsExample6Component,
+	RxjsExample7Component,
+	RxjsExample8Component,
+	RxjsExample9Component,
+	RxjsExample10Component,
+	RxjsExample11Component,
+	RxjsExample12Component,
+	RxjsExample13Component,
 ]
+
+export const RXJS_CHILDREN_ROUTES = Array(13).fill(null).map((_, index) => ({
+	path: `example${index + 1}`,
+	component: components[index],
+	data: {
+		tabIndex: index
+	}
+}))

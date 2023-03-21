@@ -20,11 +20,11 @@ export class RxjsComponent implements OnInit, OnDestroy {
             takeUntil(this.destroy$),
             filter(event => event instanceof NavigationStart)) as Observable<NavigationStart>
         )
-            .subscribe(navStart => navStart.url.split('/').length === 2 && this.activeItemIndex$.next(null))
+            .subscribe(navStart =>  navStart.url.split('/').length === 2 && this.activeItemIndex$.next(null))
     }
 
     ngOnInit(): void {
-        this.activeItemIndex$.next(this.route.snapshot.children.length ?  this.route.snapshot.children[0].data['tabIndex'] : null)
+        this.activeItemIndex$.next(this.route.snapshot.children.length ? this.route.snapshot.children[0].data['tabIndex'] : null)
     }
 
     ngOnDestroy(): void {

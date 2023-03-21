@@ -9,4 +9,4 @@ import { SharedModule } from "@shared/shared.module";
 	declarations: [RxjsExample11NotificationComponent],
 	exports: [RxjsExample11NotificationComponent]
 })
-export class NotificationModule {}
+export class RxjsExample11NotificationModule {}

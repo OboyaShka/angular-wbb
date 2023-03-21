@@ -21,11 +21,15 @@ import { RxjsExample9Component } from './examples/rxjs-example9/rxjs-example9.co
 import { RxjsExample10Component } from './examples/rxjs-example10/rxjs-example10.component';
 import { RxjsExample11Component } from './examples/rxjs-example11/rxjs-example11.component';
 import {
-	NotificationModule
+	RxjsExample11NotificationModule
 } from "@app/modules/rxjs/examples/rxjs-example11/rxjs-example11-notification/rxjs-example11-notification.module";
 import { RxjsExample12Component } from './examples/rxjs-example12/rxjs-example12.component';
 import { RxjsExample12PortalComponent } from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-portal.component';
 import { RxjsExample12ModalCloseDirective } from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-modal-close.directive';
+import { RxjsExample13Component } from './examples/rxjs-example13/rxjs-example13.component';
+import {
+	RxjsExample13ElasticStickyModule
+} from "@app/modules/rxjs/examples/rxjs-example13/rxjs-example13-elastic-sticky/rxjs-example13-elastic-sticky.module";
 
 @NgModule({
 	declarations: [
@@ -44,7 +48,8 @@ import { RxjsExample12ModalCloseDirective } from './examples/rxjs-example12/rxjs
 		RxjsExample11Component,
   RxjsExample12Component,
   RxjsExample12PortalComponent,
-  RxjsExample12ModalCloseDirective
+  RxjsExample12ModalCloseDirective,
+  RxjsExample13Component
 	],
 	imports: [
 		CommonModule,
@@ -53,7 +58,8 @@ import { RxjsExample12ModalCloseDirective } from './examples/rxjs-example12/rxjs
 		RxjsRoutingModule,
 		TuiTabsModule,
 		TuiRepeatTimesModule,
-		NotificationModule
+		RxjsExample11NotificationModule,
+		RxjsExample13ElasticStickyModule
 	], providers: [
 		{
 			provide: PAGE_VISIBILITY_PROVIDE_TOKEN,
