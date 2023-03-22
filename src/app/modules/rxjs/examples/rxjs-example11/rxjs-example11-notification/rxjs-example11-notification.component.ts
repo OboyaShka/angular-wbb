@@ -20,10 +20,12 @@ export class RxjsExample11NotificationComponent<T> {
 		tap(this.close.bind(this))
 	);
 
+
 	constructor(
 		@Inject(ElementRef) private readonly elementRef: ElementRef<HTMLElement>
 	) {}
 
+	ngOnDestroy
 
 	close() {
 		this.observer.complete();

@@ -30,6 +30,7 @@ import { RxjsExample13Component } from './examples/rxjs-example13/rxjs-example13
 import {
 	RxjsExample13ElasticStickyModule
 } from "@app/modules/rxjs/examples/rxjs-example13/rxjs-example13-elastic-sticky/rxjs-example13-elastic-sticky.module";
+import { RxjsExample14Component } from './examples/rxjs-example14/rxjs-example14.component';
 
 @NgModule({
 	declarations: [
@@ -49,7 +50,8 @@ import {
   RxjsExample12Component,
   RxjsExample12PortalComponent,
   RxjsExample12ModalCloseDirective,
-  RxjsExample13Component
+  RxjsExample13Component,
+  RxjsExample14Component
 	],
 	imports: [
 		CommonModule,

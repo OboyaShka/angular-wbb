@@ -1,0 +1,28 @@
+<blockquote>
+    You have an area with folders. Allow user to select several folders with their mouse dragging (like on desktop).
+
+    <p><code>div</code>
+        element with class selected is an example of how selection can look like.
+    </p>
+</blockquote>
+
+<ng-container *ngIf="selected$ | async as selectedFolders">
+    <p>
+        Folders selected: {{selectedFolders}}
+    </p>
+
+    <div class="folders" #area>
+        <div *ngFor="let folder of folders" class="folder" [class.selected-folder]="selectedFolders.includes(folder)"
+             #folder>
+            {{folder}}
+        </div>
+        <div
+            *ngIf="clientRect$ | async as coordinates"
+            class="selected"
+            [style.left.px]="coordinates.x"
+            [style.top.px]="coordinates.y"
+            [style.width.px]="coordinates.width"
+            [style.height.px]="coordinates.height"
+        ></div>
+    </div>
+</ng-container>
