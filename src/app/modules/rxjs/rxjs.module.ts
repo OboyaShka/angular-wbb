@@ -24,13 +24,21 @@ import {
 	RxjsExample11NotificationModule
 } from "@app/modules/rxjs/examples/rxjs-example11/rxjs-example11-notification/rxjs-example11-notification.module";
 import { RxjsExample12Component } from './examples/rxjs-example12/rxjs-example12.component';
-import { RxjsExample12PortalComponent } from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-portal.component';
-import { RxjsExample12ModalCloseDirective } from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-modal-close.directive';
+import {
+	RxjsExample12PortalComponent
+} from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-portal.component';
+import {
+	RxjsExample12ModalCloseDirective
+} from './examples/rxjs-example12/rxjs-example12-portal/rxjs-example12-modal-close.directive';
 import { RxjsExample13Component } from './examples/rxjs-example13/rxjs-example13.component';
 import {
 	RxjsExample13ElasticStickyModule
 } from "@app/modules/rxjs/examples/rxjs-example13/rxjs-example13-elastic-sticky/rxjs-example13-elastic-sticky.module";
 import { RxjsExample14Component } from './examples/rxjs-example14/rxjs-example14.component';
+import { RxjsExample15Component } from './examples/rxjs-example15/rxjs-example15.component';
+import {
+	RxjsExample15FocusTypeDirective
+} from "@app/modules/rxjs/examples/rxjs-example15/rxjs-example15-focus-type.directive";
 
 @NgModule({
 	declarations: [
@@ -47,11 +55,13 @@ import { RxjsExample14Component } from './examples/rxjs-example14/rxjs-example14
 		RxjsExample9Component,
 		RxjsExample10Component,
 		RxjsExample11Component,
-  RxjsExample12Component,
-  RxjsExample12PortalComponent,
-  RxjsExample12ModalCloseDirective,
-  RxjsExample13Component,
-  RxjsExample14Component
+		RxjsExample12Component,
+		RxjsExample12PortalComponent,
+		RxjsExample12ModalCloseDirective,
+		RxjsExample13Component,
+		RxjsExample14Component,
+		RxjsExample15Component,
+		RxjsExample15FocusTypeDirective
 	],
 	imports: [
 		CommonModule,

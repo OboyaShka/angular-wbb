@@ -13,6 +13,7 @@ import { RxjsExample11Component } from "./examples/rxjs-example11/rxjs-example11
 import { RxjsExample12Component } from "@app/modules/rxjs/examples/rxjs-example12/rxjs-example12.component";
 import { RxjsExample13Component } from "@app/modules/rxjs/examples/rxjs-example13/rxjs-example13.component";
 import { RxjsExample14Component } from "@app/modules/rxjs/examples/rxjs-example14/rxjs-example14.component";
+import { RxjsExample15Component } from "@app/modules/rxjs/examples/rxjs-example15/rxjs-example15.component";
 
 export const PAGE_VISIBILITY_PROVIDE_TOKEN = new InjectionToken('rxjs-example-2 page visibility service token')
 
@@ -30,7 +31,8 @@ const components = [
 	RxjsExample11Component,
 	RxjsExample12Component,
 	RxjsExample13Component,
-	RxjsExample14Component
+	RxjsExample14Component,
+	RxjsExample15Component
 ]
 
 export const RXJS_CHILDREN_ROUTES = Array(components.length).fill(null).map((_, index) => ({
