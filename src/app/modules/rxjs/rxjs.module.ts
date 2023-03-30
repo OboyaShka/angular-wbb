@@ -40,6 +40,7 @@ import {
 	RxjsExample15FocusTypeDirective
 } from "@app/modules/rxjs/examples/rxjs-example15/rxjs-example15-focus-type.directive";
 import { RxjsExample16Component } from './examples/rxjs-example16/rxjs-example16.component';
+import { RxjsExample17Component } from './examples/rxjs-example17/rxjs-example17.component';
 
 @NgModule({
 	declarations: [
@@ -63,7 +64,8 @@ import { RxjsExample16Component } from './examples/rxjs-example16/rxjs-example16
 		RxjsExample14Component,
 		RxjsExample15Component,
 		RxjsExample15FocusTypeDirective,
-  RxjsExample16Component
+		RxjsExample16Component,
+		RxjsExample17Component,
 	],
 	imports: [
 		CommonModule,
