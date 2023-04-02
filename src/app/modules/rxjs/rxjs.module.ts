@@ -43,6 +43,8 @@ import { RxjsExample16Component } from './examples/rxjs-example16/rxjs-example16
 import { RxjsExample17Component } from './examples/rxjs-example17/rxjs-example17.component';
 import { RxjsExample18Component } from './examples/rxjs-example18/rxjs-example18.component';
 import { RxjsExample19Component } from './examples/rxjs-example19/rxjs-example19.component';
+import { RxjsExample20Component } from './examples/rxjs-example20/rxjs-example20.component';
+import { RxjsExample20RippleDirective } from './examples/rxjs-example20/rxjs-example20-ripple.directive';
 
 @NgModule({
 	declarations: [
@@ -70,6 +72,8 @@ import { RxjsExample19Component } from './examples/rxjs-example19/rxjs-example19
 		RxjsExample17Component,
   RxjsExample18Component,
   RxjsExample19Component,
+  RxjsExample20Component,
+  RxjsExample20RippleDirective,
 	],
 	imports: [
 		CommonModule,
