@@ -3,7 +3,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation } from '@
 @Component({
   selector: 'app-rxjs-example20',
   templateUrl: './rxjs-example20.component.html',
-  styleUrls: ['./rxjs-example20.component.scss'],
+  styleUrls: ['./rxjs-example20.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None
 })

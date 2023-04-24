@@ -18,7 +18,7 @@ type Rect = Readonly<{ x: number; y: number; width: number; height: number }>;
 @Component({
   selector: 'app-rxjs-example14',
   templateUrl: './rxjs-example14.component.html',
-  styleUrls: ['./rxjs-example14.component.scss'],
+  styleUrls: ['./rxjs-example14.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample14Component {

@@ -6,7 +6,7 @@ import { distinctUntilChanged, filter, map, share, switchMapTo } from "rxjs/oper
 @Component({
 	selector: 'app-rxjs-example4',
 	templateUrl: './rxjs-example4.component.html',
-	styleUrls: ['./rxjs-example4.component.scss'],
+	styleUrls: ['./rxjs-example4.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [LoadingService]
 })

@@ -22,7 +22,7 @@ export const PAGE_VISIBILITY = new InjectionToken<Observable<boolean>>(
 @Component({
 	selector: 'rxjs-example2',
 	templateUrl: './rxjs-example2.component.html',
-	styleUrls: ['./rxjs-example2.component.scss'],
+	styleUrls: ['./rxjs-example2.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample2Component implements OnInit, OnDestroy {

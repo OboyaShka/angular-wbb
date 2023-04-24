@@ -4,7 +4,7 @@ import { FocusType, RxjsExample15FocusTypeDirective } from "./rxjs-example15-foc
 @Component({
 	selector: 'app-rxjs-example15',
 	templateUrl: './rxjs-example15.component.html',
-	styleUrls: ['./rxjs-example15.component.scss'],
+	styleUrls: ['./rxjs-example15.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [ RxjsExample15FocusTypeDirective ]
 })

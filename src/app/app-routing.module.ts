@@ -11,10 +11,14 @@ const routes: Routes = [
         path: 'rxjs',
         loadChildren: (): any => import('./modules/rxjs/rxjs.module').then(m => m.RxjsModule)
     },
-	{
-		path: 'di',
-		loadChildren: (): any => import('./modules/di/di.module').then(m => m.DiModule)
-	},
+    {
+      path: 'di',
+      loadChildren: (): any => import('./modules/di/di.module').then(m => m.DiModule)
+    },
+    {
+      path: 'css',
+      loadChildren: (): any => import('./modules/css/css.module').then(m => m.CssModule)
+    },
 ];
 
 @NgModule({

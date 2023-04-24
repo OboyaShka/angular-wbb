@@ -28,7 +28,7 @@ export function animationFrame({
 @Component({
 	selector: 'app-rxjs-example19',
 	templateUrl: './rxjs-example19.component.html',
-	styleUrls: ['./rxjs-example19.component.scss'],
+	styleUrls: ['./rxjs-example19.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample19Component {

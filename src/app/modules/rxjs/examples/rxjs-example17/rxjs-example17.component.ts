@@ -6,7 +6,7 @@ import { distinctUntilChanged, map, repeat, skip, startWith, switchMapTo, takeUn
 @Component({
 	selector: 'app-rxjs-example17',
 	templateUrl: './rxjs-example17.component.html',
-	styleUrls: ['./rxjs-example17.component.scss'],
+	styleUrls: ['./rxjs-example17.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [RxjsExample17DataService]
 })

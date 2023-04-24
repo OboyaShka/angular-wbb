@@ -8,7 +8,7 @@ import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'di-example1v2-organization',
   templateUrl: './di-example1v2-organization.component.html',
-  styleUrls: ['./di-example1v2-organization.component.scss'],
+  styleUrls: ['./di-example1v2-organization.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [OrganizationService],
 })

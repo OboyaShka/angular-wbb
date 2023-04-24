@@ -1,12 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-wbb-main',
-  templateUrl: './wbb-main.component.html',
-  styleUrls: ['./wbb-main.component.less'],
+  selector: 'app-css',
+  templateUrl: './css.component.html',
+  styleUrls: ['./css.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WbbMainComponent implements OnInit {
+export class CssComponent implements OnInit {
 
   constructor() { }
 

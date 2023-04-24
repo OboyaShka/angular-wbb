@@ -5,7 +5,7 @@ import { map, startWith, switchMapTo, takeWhile, tap } from "rxjs/operators";
 @Component({
 	selector: 'app-rxjs-example5',
 	templateUrl: './rxjs-example5.component.html',
-	styleUrls: ['./rxjs-example5.component.scss'],
+	styleUrls: ['./rxjs-example5.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample5Component {

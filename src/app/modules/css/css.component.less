@@ -1,0 +1,68 @@
+// Variables
+
+a,
+.link {
+  color: #428bca;
+}
+.widget {
+  color: #fff;
+  background: #428bca;
+}
+
+@link-color: #428bca; // sea blue
+@link-color-hover:  darken(@link-color, 10%);
+
+a,
+.link {
+  color: @link-color;
+}
+a:hover {
+  color: @link-color-hover;
+}
+.widget {
+  color: #fff;
+  background: @link-color;
+}
+
+// Selectors
+
+// Variables
+@my-selector: banner;
+
+// Usage
+.@{my-selector} {
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+// Compiles to:
+// .banner {
+//  font-weight: bold;
+//  line-height: 40px;
+//  margin: 0 auto;
+//}
+
+// URLs
+
+// Variables
+@images: "";
+
+// Usage
+body {
+  color: #444;
+  background: url("@{images}/white-sand.png");
+}
+
+@property: color;
+
+.widget {
+    @{property}: #0ee;
+  background-@{property}: #999;
+}
+
+// to
+//.widget {
+//  color: #0ee;
+//  background-color: #999;
+//}

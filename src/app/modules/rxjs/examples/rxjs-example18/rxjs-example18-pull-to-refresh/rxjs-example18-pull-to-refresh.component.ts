@@ -24,7 +24,7 @@ function translateY(distance: number): string {
 @Component({
 	selector: 'pull-to-refresh',
 	templateUrl: './rxjs-example18-pull-to-refresh.component.html',
-	styleUrls: ['./rxjs-example18-pull-to-refresh.component.scss'],
+	styleUrls: ['./rxjs-example18-pull-to-refresh.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [PULL_TO_REFRESH_PROVIDERS]
 })

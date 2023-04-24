@@ -39,7 +39,7 @@ export function smartSearch<T>(
 @Component({
 	selector: 'app-rxjs-example8',
 	templateUrl: './rxjs-example8.component.html',
-	styleUrls: ['./rxjs-example8.component.scss'],
+	styleUrls: ['./rxjs-example8.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample8Component {

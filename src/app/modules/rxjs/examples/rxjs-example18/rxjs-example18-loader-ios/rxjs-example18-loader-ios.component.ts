@@ -6,7 +6,7 @@ const ROTATE_X_STEP = 30;
 @Component({
   selector: 'loader-ios',
   templateUrl: './rxjs-example18-loader-ios.component.html',
-  styleUrls: ['./rxjs-example18-loader-ios.component.scss'],
+  styleUrls: ['./rxjs-example18-loader-ios.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample18LoaderIosComponent {

@@ -4,7 +4,7 @@ import { RxjsExample12ModalService } from "@app/modules/rxjs/examples/rxjs-examp
 @Component({
   selector: 'app-rxjs-example12',
   templateUrl: './rxjs-example12.component.html',
-  styleUrls: ['./rxjs-example12.component.scss'],
+  styleUrls: ['./rxjs-example12.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample12Component {

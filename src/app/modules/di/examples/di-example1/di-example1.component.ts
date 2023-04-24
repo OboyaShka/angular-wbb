@@ -5,7 +5,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'app-di-example1',
   templateUrl: './di-example1.component.html',
-  styleUrls: ['./di-example1.component.scss'],
+  styleUrls: ['./di-example1.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DiExample1Component implements OnInit {

@@ -7,7 +7,7 @@ import { RXJS_CHILDREN_ROUTES } from "@app/modules/rxjs/rxjs.constants";
 @Component({
     selector: 'app-rxjs',
     templateUrl: './rxjs.component.html',
-    styleUrls: ['./rxjs.component.scss'],
+    styleUrls: ['./rxjs.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsComponent implements OnInit, OnDestroy {

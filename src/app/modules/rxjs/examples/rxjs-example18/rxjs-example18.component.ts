@@ -7,7 +7,7 @@ const loaded$ = new Subject<void>();
 @Component({
   selector: 'app-rxjs-example18',
   templateUrl: './rxjs-example18.component.html',
-  styleUrls: ['./rxjs-example18.component.scss'],
+  styleUrls: ['./rxjs-example18.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [
 		{

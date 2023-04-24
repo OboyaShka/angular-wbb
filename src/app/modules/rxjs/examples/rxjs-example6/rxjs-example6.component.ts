@@ -16,7 +16,7 @@ const registerSeats = (selected: Set<number>, seat: number) => {
 @Component({
 	selector: 'app-rxjs-example6',
 	templateUrl: './rxjs-example6.component.html',
-	styleUrls: ['./rxjs-example6.component.scss'],
+	styleUrls: ['./rxjs-example6.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample6Component {

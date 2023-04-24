@@ -14,7 +14,7 @@ const clamp = (value: number, min: number, max: number): number => Math.min(max,
 @Component({
 	selector: 'app-rxjs-example10',
 	templateUrl: './rxjs-example10.component.html',
-	styleUrls: ['./rxjs-example10.component.scss'],
+	styleUrls: ['./rxjs-example10.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample10Component  {

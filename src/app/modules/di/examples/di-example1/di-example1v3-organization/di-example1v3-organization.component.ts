@@ -9,7 +9,7 @@ import { Organization } from "@app/modules/di/examples/di-example1/di-example1.c
 @Component({
 	selector: 'di-example1v3-organization',
 	templateUrl: './di-example1v3-organization.component.html',
-	styleUrls: ['./di-example1v3-organization.component.scss'],
+	styleUrls: ['./di-example1v3-organization.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [ORGANIZATION_PROVIDERS],
 })

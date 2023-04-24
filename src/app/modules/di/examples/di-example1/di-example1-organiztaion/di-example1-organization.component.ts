@@ -8,7 +8,7 @@ import { switchMap } from "rxjs/operators";
 @Component({
   selector: 'di-example1-organization',
   templateUrl: './di-example1-organization.component.html',
-  styleUrls: ['./di-example1-organization.component.scss'],
+  styleUrls: ['./di-example1-organization.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [OrganizationService]
 })

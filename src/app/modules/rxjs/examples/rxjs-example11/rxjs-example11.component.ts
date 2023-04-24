@@ -6,7 +6,7 @@ import {
 @Component({
   selector: 'app-rxjs-example11',
   templateUrl: './rxjs-example11.component.html',
-  styleUrls: ['./rxjs-example11.component.scss'],
+  styleUrls: ['./rxjs-example11.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample11Component {

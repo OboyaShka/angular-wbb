@@ -80,7 +80,7 @@ const MAX_ZOOM = 2;
 @Component({
 	selector: 'app-rxjs-example16',
 	templateUrl: './rxjs-example16.component.html',
-	styleUrls: ['./rxjs-example16.component.scss'],
+	styleUrls: ['./rxjs-example16.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [TuiDestroyService]
 })

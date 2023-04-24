@@ -27,7 +27,7 @@ export const COLLAPSE = trigger("collapse", [
 @Component({
 	selector: 'rxjs-example3',
 	templateUrl: 'rxjs-example3.component.html',
-	styleUrls: ['rxjs-example3.component.scss'],
+	styleUrls: ['rxjs-example3.component.less'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [
 		LoginService

@@ -14,7 +14,7 @@ const ROTATE_X_MULTIPLIER = 2.3;
 @Component({
   selector: 'loader-android',
   templateUrl: './rxjs-example18-loader-android.component.html',
-  styleUrls: ['./rxjs-example18-loader-android.component.scss'],
+  styleUrls: ['./rxjs-example18-loader-android.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample18LoaderAndroidComponent  {

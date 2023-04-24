@@ -5,7 +5,7 @@ import { repeatWhen, takeUntil, tap } from "rxjs/operators";
 @Component({
   selector: 'notification',
   templateUrl: './rxjs-example11-notification.component.html',
-  styleUrls: ['./rxjs-example11-notification.component.scss'],
+  styleUrls: ['./rxjs-example11-notification.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample11NotificationComponent<T> {

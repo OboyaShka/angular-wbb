@@ -3,7 +3,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'app-rxjs-example13',
   templateUrl: './rxjs-example13.component.html',
-  styleUrls: ['./rxjs-example13.component.scss'],
+  styleUrls: ['./rxjs-example13.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample13Component  {

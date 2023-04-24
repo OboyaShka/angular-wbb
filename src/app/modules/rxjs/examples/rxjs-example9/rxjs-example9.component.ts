@@ -29,7 +29,7 @@ export const SUBTITLES = [
 @Component({
   selector: 'app-rxjs-example9',
   templateUrl: './rxjs-example9.component.html',
-  styleUrls: ['./rxjs-example9.component.scss'],
+  styleUrls: ['./rxjs-example9.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample9Component {

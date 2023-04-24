@@ -8,7 +8,7 @@ const THRESHOLD = 500;
 @Component({
   selector: 'app-rxjs-example7',
   templateUrl: './rxjs-example7.component.html',
-  styleUrls: ['./rxjs-example7.component.scss'],
+  styleUrls: ['./rxjs-example7.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample7Component {
