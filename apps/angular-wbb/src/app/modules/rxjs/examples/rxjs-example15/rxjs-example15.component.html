@@ -1,0 +1,8 @@
+<blockquote>Determine whether an element was focused with keyboard, mouse, touch or programmatically</blockquote>
+<p>
+    <button #target [class]="focusType" (focusType)="focusType = $event">
+        {{ focusType }}
+    </button>
+
+    <button (click)="target.focus()">focus it</button>
+</p>

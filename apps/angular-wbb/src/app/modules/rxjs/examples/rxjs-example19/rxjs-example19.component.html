@@ -1,0 +1,7 @@
+<blockquote>
+    Create Observable based on
+    <code>requestAnimationFrame</code>
+    and show FPS meter
+</blockquote>
+<p>FPS: {{ fps$ | async }}</p>
+<blockquote (mousemove)="onMouseMove()">Slow down by moving mouse over here</blockquote>
