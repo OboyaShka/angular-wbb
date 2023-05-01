@@ -48,6 +48,7 @@ import { RxjsExample20RippleDirective } from './examples/rxjs-example20/rxjs-exa
 import { RxjsExample18PullToRefreshComponent } from './examples/rxjs-example18/rxjs-example18-pull-to-refresh/rxjs-example18-pull-to-refresh.component';
 import { RxjsExample18LoaderIosComponent } from './examples/rxjs-example18/rxjs-example18-loader-ios/rxjs-example18-loader-ios.component';
 import { RxjsExample18LoaderAndroidComponent } from './examples/rxjs-example18/rxjs-example18-loader-android/rxjs-example18-loader-android.component';
+import { RxjsExample21Component } from './examples/rxjs-example21/rxjs-example21.component';
 
 @NgModule({
 	declarations: [
@@ -80,6 +81,7 @@ import { RxjsExample18LoaderAndroidComponent } from './examples/rxjs-example18/r
   RxjsExample18PullToRefreshComponent,
   RxjsExample18LoaderIosComponent,
   RxjsExample18LoaderAndroidComponent,
+  RxjsExample21Component,
 	],
 	imports: [
 		CommonModule,
