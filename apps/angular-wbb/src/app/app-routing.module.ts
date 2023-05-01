@@ -18,7 +18,12 @@ const routes: Routes = [
     {
         path: 'css',
         loadChildren: (): any => import('./modules/css/css.module').then(m => m.CssModule)
+    },
+    {
+      path: 'ngrx',
+      loadChildren: (): any => import('./modules/ngrx/ngrx.module').then(m => m.NgrxModule)
     }
+
 ];
 
 @NgModule({

@@ -1,0 +1,6 @@
+<button [disabled]="disabled$ | async" (click)="decrease()">-</button>
+<button (click)="increase()">+</button>
+<button [disabled]="disabled$ | async" (click)="clear()">Очистить</button>
+<div>
+    <span>Счётчик: {{count$ | async}}. Последнее обновление: {{date$ | async | date : 'dd.MM.yyyy hh:mm:ss'}}</span>
+</div>
