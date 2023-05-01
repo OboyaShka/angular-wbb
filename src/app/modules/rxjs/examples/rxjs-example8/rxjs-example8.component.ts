@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Observable, of, OperatorFunction } from "rxjs";
 import { debounceTime, distinctUntilChanged, scan, startWith, switchMap } from "rxjs/operators";
-import { FormControl } from "@angular/forms";
+import { UntypedFormControl } from "@angular/forms";
 
 function requestBackendEmulation(search: string): Observable<readonly string[]> {
 	console.log('backend called');
@@ -43,7 +43,7 @@ export function smartSearch<T>(
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxjsExample8Component {
-	readonly control = new FormControl('');
+	readonly control = new UntypedFormControl('');
 
 	readonly items$ = this.control.valueChanges.pipe(
 		smartSearch(requestBackendEmulation)
