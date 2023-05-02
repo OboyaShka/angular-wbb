@@ -1,41 +1,35 @@
-import { ActionReducer } from "@ngrx/store";
-import { CountActions, countActionsType } from "./count.actions";
+import { createFeature, createReducer, on } from "@ngrx/store";
+import { CountActions } from "./count.actions";
 
-export const countNode = 'count'
-
-export interface CountReducer {
+export interface CountState {
 	count: number;
 	updatedAt: number;
 }
 
-const initialState: CountReducer = {
+const initialState: CountState = {
 	count: 0,
 	updatedAt: Date.now()
 }
 
-export const countReducer: ActionReducer<CountReducer, CountActions> = (state = initialState, action) => {
-	switch (action.type) {
-		case countActionsType.increase:
-			return {
+export const countFeature = createFeature({
+	name: 'count',
+	reducer: createReducer(
+			initialState,
+			on(CountActions.countIncreaseAction, state => ({
 				...state,
 				count: state.count + 1
-			}
-		case countActionsType.decrease:
-			return {
+			})),
+			on(CountActions.countDecreaseAction, state => ({
 				...state,
 				count: state.count - 1
-			}
-		case countActionsType.clear:
-			return {
+			})),
+			on(CountActions.countClearAction, state => ({
 				...state,
 				count: 0
-			}
-		case countActionsType.updated:
-			return {
+			})),
+			on(CountActions.countUpdatedAtAction, (state, { prop }) => ({
 				...state,
-				updatedAt: action.payload.updated
-			}
-		default:
-			return state
-	}
-}
+				updatedAt: prop.updated
+			}))
+	)
+})

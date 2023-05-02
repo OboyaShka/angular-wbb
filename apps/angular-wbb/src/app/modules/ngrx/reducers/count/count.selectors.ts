@@ -1,14 +1,11 @@
-import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { countNode, CountReducer } from "./count.reducer";
+import { countFeature } from "./count.reducer";
 
-export const selectCountFeature = createFeatureSelector<CountReducer>(countNode)
+const {
+	selectCount,
+	selectUpdatedAt
+} = countFeature
 
-export const selectCount = createSelector(
-		selectCountFeature,
-		(state) => state.count
-)
-
-export const selectDate = createSelector(
-		selectCountFeature,
-		(state) => state.updatedAt
-)
+export const countSelectors = {
+	selectCount,
+	selectUpdatedAt
+}

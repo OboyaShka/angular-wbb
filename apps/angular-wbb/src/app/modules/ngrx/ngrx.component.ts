@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { select, Store } from "@ngrx/store";
-import { CountState } from "./reducers";
 import { Observable } from "rxjs";
-import { selectCount, selectDate } from "./reducers/count/count.selectors";
-import { CountClearAction, CountDecreaseAction, CountIncreaseAction } from "./reducers/count/count.actions";
 import { map } from "rxjs/operators";
+import { countSelectors } from "./reducers/count/count.selectors";
+import { CountActions } from "./reducers/count/count.actions";
+import { CountState } from "./reducers/count/count.reducer";
 
 @Component({
 	styleUrls: ['ngrx.component.less'],
@@ -12,22 +12,22 @@ import { map } from "rxjs/operators";
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgrxComponent {
-	public count$: Observable<number> = this.store$.pipe(select(selectCount))
-	public date$: Observable<number> = this.store$.pipe(select(selectDate))
+	public count$: Observable<number> = this.store$.pipe(select(countSelectors.selectCount))
+	public date$: Observable<number> = this.store$.pipe(select(countSelectors.selectUpdatedAt))
 	public disabled$: Observable<boolean> = this.count$.pipe(map(count => count <= 0))
 
 	constructor(private store$: Store<CountState>) {
 	}
 
 	decrease() {
-		this.store$.dispatch(new CountDecreaseAction())
+		this.store$.dispatch(CountActions.countDecreaseAction())
 	}
 
 	increase() {
-		this.store$.dispatch(new CountIncreaseAction())
+		this.store$.dispatch(CountActions.countIncreaseAction())
 	}
 
 	clear() {
-		this.store$.dispatch(new CountClearAction())
+		this.store$.dispatch(CountActions.countClearAction())
 	}
 }

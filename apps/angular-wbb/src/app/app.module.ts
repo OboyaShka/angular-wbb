@@ -13,8 +13,6 @@ import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../environments/environment";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
-import { reducers } from "./modules/ngrx/reducers";
-import { NgrxEffects } from "./modules/ngrx/ngrx.effects";
 
 @NgModule({
     declarations: [AppComponent],
@@ -30,13 +28,12 @@ import { NgrxEffects } from "./modules/ngrx/ngrx.effects";
         TuiButtonModule,
         SharedModule,
 		EffectsModule.forRoot(),
-		StoreModule.forRoot(reducers,{
+		StoreModule.forRoot([],{
 			runtimeChecks: {
 				strictStateImmutability: true,
 				strictActionImmutability: true
 			}
 		}),
-		EffectsModule.forFeature([NgrxEffects]),
 		StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
 		StoreRouterConnectingModule.forRoot(),
 	],
