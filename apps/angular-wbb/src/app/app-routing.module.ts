@@ -22,8 +22,11 @@ const routes: Routes = [
     {
       path: 'ngrx',
       loadChildren: (): any => import('./modules/ngrx/ngrx.module').then(m => m.NgrxModule)
-    }
-
+    },
+	{
+		path: 'sandbox',
+		loadChildren: (): any => import('./modules/sandbox/sandbox.module').then(m => m.SandboxModule)
+	}
 ];
 
 @NgModule({
