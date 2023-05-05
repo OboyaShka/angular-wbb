@@ -1,0 +1,20 @@
+<video
+    #video
+    media
+    [(currentTime)]="currentTime"
+    [(paused)]="paused"
+    [(volume)]="volume"
+    (click)="toggleState()"
+>
+    <ng-content></ng-content>
+</video>
+<div>
+    <button (click)="toggleState()" type="button" title="Play/Pause">{{icon}}</button>
+    <input type="range" [max]="video.duration" [(ngModel)]="currentTime"/>
+    <input type="range" [min]="0" [max]="100" [(ngModel)]="volume"/>
+
+
+    <div>{{volume}}/100</div>
+    <div>{{currentTime}}/{{video.duration}}</div>
+
+</div>

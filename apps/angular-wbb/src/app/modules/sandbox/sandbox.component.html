@@ -1,1 +1,28 @@
-asd
+<div>
+    <svg class="chart" [lineChart]="lineChart" [x]="x" [width]="width" [height]="200" [smoothing]="smoothing"/>
+
+    <p>
+        <label>
+            <span>offset:</span>
+            <input type="range" min="0" max="400" [(ngModel)]="x" />
+        </label>
+    </p>
+
+    <p>
+        <label>
+            <span>scale:</span>
+            <input type="range" min="400" max="800" [(ngModel)]="width" />
+        </label>
+    </p>
+
+    <p>
+        <label>
+            <span>smoothing:</span>
+            <input type="range" min="0" max="80" [(ngModel)]="smoothing" />
+        </label>
+    </p>
+
+    <video-player>
+        <source src="https://alphamama.me/wp-content/uploads/2020/08/videoplayback.mp4" type="video/mp4" />
+    </video-player>
+</div>
