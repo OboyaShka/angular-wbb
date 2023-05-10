@@ -1,0 +1,9 @@
+<div class="block">
+    ON DEFAULT
+    <button (click)="click()">render works!</button>
+    <div>{{data}}</div>
+    <div *ngFor="let item of array">
+        |{{item}}|
+    </div>
+    {{redraw()}}
+</div>

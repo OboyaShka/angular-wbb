@@ -1,0 +1,22 @@
+<div class="block">
+    ON PUSH
+    <button (click)="childContent = childContent + 1">render works!</button>
+    {{redraw()}}
+    <div>{{data}}</div>
+    <div *ngFor="let item of array">
+        |{{item}}|
+    </div>
+    <app-on-push-child (output)="true" [template]="refParent">
+        <div #child>{{childContent}}</div>
+        <span #text>1</span>
+        <span #text>2</span>
+        <span #text>3</span>
+        <ng-template #ha let-item>{{item}}</ng-template>
+        <ng-template #hi let-item>{{item}}</ng-template>
+        <ng-template #he let-item>{{item}}</ng-template>
+    </app-on-push-child>
+</div>
+
+<ng-template #refParent let-element>
+    <h1>{{element}}</h1>
+</ng-template>

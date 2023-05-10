@@ -26,6 +26,10 @@ const routes: Routes = [
 	{
 		path: 'sandbox',
 		loadChildren: (): any => import('./modules/sandbox/sandbox.module').then(m => m.SandboxModule)
+	},
+	{
+		path: 'render',
+		loadChildren: (): any => import('./modules/render/render.module').then(m => m.RenderModule)
 	}
 ];
 

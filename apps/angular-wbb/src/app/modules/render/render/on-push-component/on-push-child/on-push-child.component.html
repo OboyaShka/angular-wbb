@@ -1,0 +1,22 @@
+<p>on-push-child works!</p>
+<ng-content></ng-content>
+{{redraw()}}
+<ng-container *ngFor="let template of templates">
+    <ng-container *ngTemplateOutlet="template; context: { $implicit: 'test '}"></ng-container>
+</ng-container>
+<button (click)="output.emit()">child</button>
+<ng-content select=".text"></ng-content>
+
+<ng-template #ref let-test>{{test}}</ng-template>
+
+<ng-container *ngTemplateOutlet="ref; context: { $implicit: '321'}"></ng-container>
+
+<div #viewDiv>test</div>
+
+<ng-template #refParent let-element>
+    <span>{{element}}</span>
+</ng-template>
+
+<div *ngFor="let i of [1,2,3]">
+    <ng-container *ngTemplateOutlet="template || refParent; context: { $implicit: i }"></ng-container>
+</div>
