@@ -5,6 +5,7 @@
     <ng-container *ngTemplateOutlet="template; context: { $implicit: 'test '}"></ng-container>
 </ng-container>
 <button (click)="output.emit()">child</button>
+
 <ng-content select=".text"></ng-content>
 
 <ng-template #ref let-test>{{test}}</ng-template>

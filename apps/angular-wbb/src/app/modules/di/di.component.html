@@ -6,3 +6,5 @@
 <router-outlet *ngIf="(activeItemIndex$ | async) !== null; else content"></router-outlet>
 
 <ng-template #content> </ng-template>
+
+<ng-container *ngFor="let animal of zooService.animals">{{animal.emoji}}</ng-container>

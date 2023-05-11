@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { DI_CHILDREN_ROUTES } from "./di.constants";
+import { ZooService } from "./examples/di-example5/zoo.service";
 @Component({
     selector: 'di',
     templateUrl: './di.component.html',
@@ -14,14 +15,16 @@ export class DiComponent implements OnInit, OnDestroy {
     public examples = DI_CHILDREN_ROUTES;
     private destroy$ = new Subject<void>();
 
-    constructor(private route: ActivatedRoute, public router: Router) {
+    constructor(private route: ActivatedRoute, public router: Router, public zooService: ZooService) {
         (
             router.events.pipe(
                 takeUntil(this.destroy$),
                 filter(event => event instanceof NavigationStart)
             ) as Observable<NavigationStart>
         ).subscribe(navStart => navStart.url.split('/').length === 2 && this.activeItemIndex$.next(null));
-    }
+		console.log(this.zooService)
+
+	}
 
     ngOnInit(): void {
         this.activeItemIndex$.next(this.route.snapshot.children.length ? this.route.snapshot.children[0].data['tabIndex'] : null);
