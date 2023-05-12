@@ -22,6 +22,9 @@ import { GreetingService, UserService } from "./examples/di-example2/user.servic
 import { DiExample3Module } from "./examples/di-example3/di-example3.module";
 import { DiExample4Module } from "./examples/di-example4/di-example4.module";
 import { DiExample5Module } from "./examples/di-example5/di-example5.module";
+import { DiExample6Module } from "./examples/di-example6/di-example6.module";
+import { DiExample7Module } from "./examples/di-example7/di-example7.module";
+import { DiExample8Module } from "./examples/di-example8/di-example8.module";
 
 @NgModule({
 	declarations: [DiComponent, DiExample1Component, DiExample1OrganizationComponent, DiExample1v2OrganizationComponent, DiExample1v3OrganizationComponent, DiExample2Component],
@@ -41,7 +44,10 @@ import { DiExample5Module } from "./examples/di-example5/di-example5.module";
 			{
 				emoji: '🐏'
 			}
-		])
+		]),
+		DiExample6Module,
+		DiExample7Module.forRoot(['ru', 'eng', 'espaniolo']),
+		DiExample8Module
 	],
 	providers: [
 		BetterLoggerService,

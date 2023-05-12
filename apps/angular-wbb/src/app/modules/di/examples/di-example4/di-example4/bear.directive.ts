@@ -9,7 +9,11 @@ import { Ex4AnimalServiceService } from "../ex4-animal-service.service";
 			useValue: {
 				emoji: '🐻'
 			}
-		}
+		},
+		// {
+		// 	provide: THEME,
+		// 	useExisting: forwardRef(() => DarkThemeDirective) // Переопределение токена самой директивой
+		// }
 	]
 })
 export class BearDirective {

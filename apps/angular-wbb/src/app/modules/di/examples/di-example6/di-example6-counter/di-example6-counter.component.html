@@ -1,0 +1,7 @@
+<h3>
+    Counter = {{ counterService.count$ | async  }}
+    <div>
+        <button incDirective>+1</button>
+        <button (click)="counterService.dec()">-1</button>
+    </div>
+</h3>

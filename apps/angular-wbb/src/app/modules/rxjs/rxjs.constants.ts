@@ -20,6 +20,7 @@ import { RxjsExample18Component } from './examples/rxjs-example18/rxjs-example18
 import { RxjsExample19Component } from './examples/rxjs-example19/rxjs-example19.component';
 import { RxjsExample20Component } from './examples/rxjs-example20/rxjs-example20.component';
 import { RxjsExample21Component } from './examples/rxjs-example21/rxjs-example21.component';
+import { RxjsExample22Component } from "./examples/rxjs-example22/rxjs-example22.component";
 
 export const PAGE_VISIBILITY_PROVIDE_TOKEN = new InjectionToken('rxjs-example-2 page visibility service token');
 
@@ -44,7 +45,8 @@ const components = [
     RxjsExample18Component,
     RxjsExample19Component,
     RxjsExample20Component,
-    RxjsExample21Component
+    RxjsExample21Component,
+	RxjsExample22Component
 ];
 
 export const RXJS_CHILDREN_ROUTES = components.map((component, index) => ({

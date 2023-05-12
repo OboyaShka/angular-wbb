@@ -1,4 +1,4 @@
- {
+{
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
@@ -6,5 +6,9 @@
         "cacheableOperations": []
       }
     }
+  },
+  "@schematics/angular:component": {
+    "style": "less",
+    "changeDetection": "OnPush"
   }
 }

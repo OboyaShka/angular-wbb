@@ -7,6 +7,8 @@ import { Organization, OrganizationService } from '../di-example1.constants';
 
 export const ORGANIZATION_INFO = new InjectionToken<Observable<Organization>>('A stream with current organization information');
 
+// deps: [[new Decorator(), new Decorator(),..., TOKEN]] для декораторов
+
 export const ORGANIZATION_PROVIDERS: Provider[] = [
     {
         provide: ORGANIZATION_INFO,

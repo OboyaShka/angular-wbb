@@ -1,0 +1,7 @@
+<div>
+    CurrentLanguage = {{ lngService.language | async }}
+1
+    <select (change)="lngService.changeLng($event.target.value)">
+        <option *ngFor="let lng of lngService.languages | async">{{lng}}</option>
+    </select>
+</div>
