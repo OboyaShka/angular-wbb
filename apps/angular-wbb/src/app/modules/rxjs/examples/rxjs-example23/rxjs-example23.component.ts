@@ -28,8 +28,8 @@ export class RxjsExample23Component implements OnInit {
 	private subject$ = new Subject<string>()
 	public stuck$ = new Subject<string>()
 
-	constructor({nativeElement}: ElementRef) {
-		nativeElement['$.class.stuck'] = this.stuck$; // custom bind
+	constructor(private elementRef: ElementRef) {
+		this.elementRef.nativeElement['$.class.stuck'] = this.stuck$; // custom bind
 	}
 
 	ngOnInit(): void {
@@ -42,6 +42,7 @@ export class RxjsExample23Component implements OnInit {
 		console.log('click', $event)
 		this.subject$.next('asd')
 		this.stuck$.next('asd')
+		console.dir(this.elementRef.nativeElement.setAttribute('viewBox', '321'))
 	}
 
 	@HostBinding('$.aria-label.attr')
@@ -54,5 +55,11 @@ export class RxjsExample23Component implements OnInit {
 	onScroll() {
 		console.log('loadMore')
 		this.subject$.next('')
+	}
+
+	// Геттер срабатывает после ngOnChanges, соответственно можно изменять значения при изменении инпутов
+	@HostBinding('attr.viewBox')
+	get viewBox() {
+		return '32'
 	}
 }

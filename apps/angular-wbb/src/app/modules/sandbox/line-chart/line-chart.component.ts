@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input, OnChanges } from '@angular/core';
 import { Pure } from "./pure";
 import { draw } from "./draw";
 
@@ -11,7 +11,7 @@ import { draw } from "./draw";
 		preserveAspectRatio: "none"
 	}
 })
-export class LineChartComponent {
+export class LineChartComponent implements OnChanges {
 	@Input()
 	lineChart: readonly [number, number][] = []
 
@@ -32,7 +32,12 @@ export class LineChartComponent {
 
 	@HostBinding('attr.viewBox')
 	get viewBox(): string {
+		console.log('viewBox get!')
 		return `${this.x} ${this.y} ${this.width} ${this.height}`
+	}
+
+	ngOnChanges() {
+		console.log('change!')
 	}
 
 	get d(): string {
