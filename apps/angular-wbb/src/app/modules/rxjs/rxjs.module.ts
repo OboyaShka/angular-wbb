@@ -54,6 +54,7 @@ import {
 import { PAGE_VISIBILITY_PROVIDE_TOKEN } from "./rxjs.constants";
 import { PageVisibilityService } from "./examples/rxjs-example2/pageVisibility.service";
 import { RxjsExample22Component } from './examples/rxjs-example22/rxjs-example22.component';
+import { RxjsExample23Component } from './examples/rxjs-example23/rxjs-example23.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { RxjsExample22Component } from './examples/rxjs-example22/rxjs-example22
     RxjsExample18LoaderIosComponent,
     RxjsExample18LoaderAndroidComponent,
     RxjsExample21Component,
-    RxjsExample22Component
+    RxjsExample22Component,
+    RxjsExample23Component
   ],
   imports: [
     CommonModule,

@@ -9,7 +9,6 @@ export function Pure<T>(
 	}
 
 	const original = value
-
 	return {
 		enumerable,
 		get(): T {

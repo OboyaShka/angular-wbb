@@ -36,6 +36,8 @@ import { CrokoDirective } from './di-example3/croko.directive';
 // PetService
 // При провайде в компонент, сервису нужен AnimalService, который уже запровайжен на уровне компонента, поэтому выше он не поднимается
 
+// SansProviders сокращение для базовых интерфейсов обычных провайдеров (useValue и т.д)
+
 @NgModule({
 	declarations: [
 		DiExample3Component,

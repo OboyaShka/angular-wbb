@@ -7,12 +7,12 @@ import { Ex4AnimalServiceService } from "../../ex4-animal-service.service";
   styleUrls: ['./di-example4-grand-child.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 	providers: [
-		// {
-		// 	provide: Ex4AnimalServiceService,
-		// 	useValue: {
-		// 		emoji: '🦓'
-		// 	}
-		// },
+		{
+			provide: Ex4AnimalServiceService,
+			useValue: {
+				emoji: '🦓'
+			}
+		},
 	]
 })
 export class DiExample4GrandChildComponent {

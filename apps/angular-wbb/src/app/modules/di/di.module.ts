@@ -25,9 +25,11 @@ import { DiExample5Module } from "./examples/di-example5/di-example5.module";
 import { DiExample6Module } from "./examples/di-example6/di-example6.module";
 import { DiExample7Module } from "./examples/di-example7/di-example7.module";
 import { DiExample8Module } from "./examples/di-example8/di-example8.module";
+import { DiExample9Component } from './examples/di-example9/di-example9.component';
+
 
 @NgModule({
-	declarations: [DiComponent, DiExample1Component, DiExample1OrganizationComponent, DiExample1v2OrganizationComponent, DiExample1v3OrganizationComponent, DiExample2Component],
+	declarations: [DiComponent, DiExample1Component, DiExample1OrganizationComponent, DiExample1v2OrganizationComponent, DiExample1v3OrganizationComponent, DiExample2Component, DiExample9Component],
 	imports: [CommonModule, RouterModule, TuiTabsModule, DiRoutingModule, DiExample3Module, DiExample4Module,
 		DiExample5Module.forRoot([
 			{

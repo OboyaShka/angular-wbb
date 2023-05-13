@@ -1,0 +1,14 @@
+<p #p>view-knowledge works!</p>
+<app-view-knowledge-child #child></app-view-knowledge-child>
+<ng-template #template>
+    <div>template</div>
+</ng-template>
+<ng-container #container>
+    <div>container</div>
+</ng-container>
+<button (click)="add()">add</button>
+<button (click)="create()">createComponent</button>
+<button (click)="addToTemplateContainer()">addToTemplateContainer</button>
+<button (click)="length()">length</button>
+<button (click)="remove()">remove</button>
+<ng-content></ng-content>

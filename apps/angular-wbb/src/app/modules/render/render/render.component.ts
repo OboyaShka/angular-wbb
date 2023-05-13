@@ -29,6 +29,7 @@ export class RenderComponent implements
 		OnDestroy
 {
 	public array: number[] = []
+	private showLifecycle: boolean = false
 
 	constructor() {
 	}
@@ -37,31 +38,31 @@ export class RenderComponent implements
 		console.log('click')
 	}
 	ngOnChanges(changes: SimpleChanges): void {
-		console.log('ngOnChanges', changes)
+		this.showLifecycle && console.log('ngOnChanges', changes)
 	}
 	ngOnInit(): void {
-		console.log('ngOnInit')
+		this.showLifecycle && console.log('ngOnInit')
 	}
 	ngDoCheck(): void {
-		console.log('ngDoCheck')
+		this.showLifecycle && console.log('ngDoCheck')
 
 	}
 	ngAfterContentInit(): void {
-		console.log('ngAfterContentInit')
+		this.showLifecycle && console.log('ngAfterContentInit')
 	}
 	ngAfterContentChecked(): void {
-		console.log('ngAfterContentChecked')
+		this.showLifecycle && console.log('ngAfterContentChecked')
 	}
 	ngAfterViewInit(): void {
-		console.log('ngAfterViewInit')
+		this.showLifecycle && console.log('ngAfterViewInit')
 	}
 	ngAfterViewChecked(): void {
-		console.log('ngAfterViewChecked')
+		this.showLifecycle && console.log('ngAfterViewChecked')
 	}
 	ngOnDestroy(): void {
-		console.log('ngOnDestroy')
+		this.showLifecycle && console.log('ngOnDestroy')
 	}
 	redraw() {
-		console.log('renderRedraw')
+		this.showLifecycle && console.log('renderRedraw')
 	}
 }

@@ -6,6 +6,8 @@ import { RenderComponent } from './render/render.component';
 import { OnPushComponentComponent } from './render/on-push-component/on-push-component.component';
 import { OnDefaultComponentComponent } from './render/on-default-component/on-default-component.component';
 import { OnPushChildComponent } from './render/on-push-component/on-push-child/on-push-child.component';
+import { ViewKnowledgeComponent } from './render/view-knowledge/view-knowledge.component';
+import { ViewKnowledgeChildComponent } from './render/view-knowledge/view-knowledge-child/view-knowledge-child.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { OnPushChildComponent } from './render/on-push-component/on-push-child/o
     RenderComponent,
     OnPushComponentComponent,
     OnDefaultComponentComponent,
-    OnPushChildComponent
+    OnPushChildComponent,
+    ViewKnowledgeComponent,
+    ViewKnowledgeChildComponent
   ],
   imports: [
     CommonModule,
