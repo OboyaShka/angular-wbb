@@ -8,6 +8,7 @@ import { OnDefaultComponentComponent } from './render/on-default-component/on-de
 import { OnPushChildComponent } from './render/on-push-component/on-push-child/on-push-child.component';
 import { ViewKnowledgeComponent } from './render/view-knowledge/view-knowledge.component';
 import { ViewKnowledgeChildComponent } from './render/view-knowledge/view-knowledge-child/view-knowledge-child.component';
+import { RenderDirective } from './render/render.directive';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ViewKnowledgeChildComponent } from './render/view-knowledge/view-knowle
     OnDefaultComponentComponent,
     OnPushChildComponent,
     ViewKnowledgeComponent,
-    ViewKnowledgeChildComponent
+    ViewKnowledgeChildComponent,
+    RenderDirective
   ],
   imports: [
     CommonModule,

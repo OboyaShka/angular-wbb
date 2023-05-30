@@ -9,6 +9,17 @@ export class SandboxComponent {
 
 	width = 400;
 
+    value = '';
+
+    items = [
+        'Abcasdasd1',
+        'hdtghers2',
+        'cvbnwet3',
+        '12sdgfftgh4',
+        'mnESwegwrg5',
+        'asadeawrt6'
+    ]
+
 	smoothing = 0;
 
 	readonly lineChart: readonly [number, number][] = [

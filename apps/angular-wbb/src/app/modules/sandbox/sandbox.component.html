@@ -1,4 +1,5 @@
 <div>
+
     <svg class="chart" [lineChart]="lineChart" [x]="x" [width]="width" [height]="200" [smoothing]="smoothing"/>
 
     <p>
@@ -35,4 +36,8 @@
         </app-menu>
     </div>
 
+
+    <combo-box [items]="items">
+        <input type="text" [(ngModel)]="value" />
+    </combo-box>
 </div>

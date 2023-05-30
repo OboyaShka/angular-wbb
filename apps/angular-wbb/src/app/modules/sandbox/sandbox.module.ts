@@ -6,9 +6,10 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { PlayerModule } from './player/player.module';
 import { MenuComponent } from './menu/menu.component';
 import { MenuDropdownComponent } from './menu/menu-dropdown/menu-dropdown.component';
+import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 @NgModule({
-	declarations: [SandboxComponent, LineChartComponent, MenuComponent, MenuDropdownComponent],
+	declarations: [SandboxComponent, LineChartComponent, MenuComponent, MenuDropdownComponent, ComboBoxComponent],
 	imports: [SharedModule, SandboxRoutingModule, PlayerModule]
 })
 export class SandboxModule {}

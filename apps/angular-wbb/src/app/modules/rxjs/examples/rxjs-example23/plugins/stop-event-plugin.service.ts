@@ -1,10 +1,14 @@
-import { Injectable, NgZone, Predicate, Provider } from '@angular/core';
-import { EVENT_MANAGER_PLUGINS } from "@angular/platform-browser";
+import { Injectable, InjectionToken, NgZone, Predicate, Provider } from '@angular/core';
+import { EVENT_MANAGER_PLUGINS, EventManager } from "@angular/platform-browser";
 import { EMPTY } from "rxjs";
 import { switchMap, take } from "rxjs/operators";
 
+type ExtractType<T> = T extends InjectionToken<Array<infer N>> ? N : never
+type OnlyPublic<T> = { [P in keyof T]: T[P]}
+export type CustomEventManager = OnlyPublic<ExtractType<typeof EVENT_MANAGER_PLUGINS>>
+
 @Injectable()
-export class StopEventPluginService {
+export class StopEventPluginService implements CustomEventManager{
 	supports(eventName: string): boolean {
 		return eventName.split('.').includes('stop')
 	}
@@ -15,12 +19,16 @@ export class StopEventPluginService {
 			handler(event)
 		}
 
-		return (this as any).manager.addEventListener(
+		return this.manager.addEventListener(
 				element,
 				event.split('.').filter(name => name !== 'stop').join('.'),
 				wrapper
 		)
 	}
+    addGlobalEventListener(_: string, __: string, ___: Function): Function {
+        return () => {};
+    }
+    manager: EventManager;
 }
 
 @Injectable()
@@ -92,7 +100,7 @@ export class ZoneEventPlugin {
 @Injectable()
 export class ObservablePlugin {
 	supports(event: string): boolean {
-		return event.split('.').includes('init');
+		return event.split('.').includes('$');
 	}
 
 	addEventListener(element: HTMLElement, event: string): Function {

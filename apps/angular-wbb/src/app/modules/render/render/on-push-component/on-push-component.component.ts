@@ -31,6 +31,7 @@ export class OnPushComponentComponent implements
 	constructor(public cdr: ChangeDetectorRef){
 		console.log('constructor parent')
 	}
+
 	// public click(): void {
 	// 	this.array.push(1)
 	// 	console.log('click')

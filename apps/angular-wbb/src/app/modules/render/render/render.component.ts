@@ -29,7 +29,7 @@ export class RenderComponent implements
 		OnDestroy
 {
 	public array: number[] = []
-	private showLifecycle: boolean = false
+	private showLifecycle: boolean = true
 
 	constructor() {
 	}

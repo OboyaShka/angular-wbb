@@ -1,0 +1,12 @@
+<ng-content></ng-content>
+<div class="toggle" (mousedown.prevent)="toggle($event)"></div>
+<div *ngIf="open" class="list">
+    <div
+        *ngFor="let item of items; let index = index"
+        class="item"
+        [class.item_active]="isActive(index)"
+        (mouseenter)="onMouseEnter(index)"
+    >
+        {{item}}
+    </div>
+</div>
